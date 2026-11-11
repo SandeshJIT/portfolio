@@ -1,389 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sandesh Sampath Kumar</title>
-  <meta name="description" content="Backend Engineer building high-scale distributed systems and AI/LLM-powered backend services with Java, .NET Core, Python, and AWS." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sandesh Sampath Kumar · Backend &amp; AI</title>
+<meta name="description" content="Backend and AI engineer. Distributed systems on AWS and Azure, and LLM agents built for regulated domains." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
+<svg id="topo" aria-hidden="true"></svg>
 
-  <!-- ─── Navigation ─── -->
-  <nav id="navbar">
-    <a href="#hero" class="nav-logo">&lt;sandesh /&gt;</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="files/resume.pdf" class="nav-cta">Resume ↗</a>
-    <button class="nav-toggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+<nav id="nav">
+  <a class="mark" href="#top">SSK<span>.</span></a>
+  <ul class="label">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#path">Path</a></li>
+    <li class="opt"><a href="files/resume.pdf" data-goatcounter-click="resume-nav" data-goatcounter-title="Resume (nav)">Résumé ↗</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- ─── Hero ─── -->
-  <section id="hero">
-    <div class="hero-grid-bg"></div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="pulse-dot"></span>
-        Software Engineer @ First Help Financial
-      </div>
-      <h1 class="hero-title">
-        <span class="hero-line">Backend</span>
-        <span class="hero-line hero-accent">Engineer.</span>
-      </h1>
-      <p class="hero-sub">
-        I build high-scale distributed systems and AI/LLM-powered backend services that handle
-        10× transaction growth, deliver 8× throughput, and drive $16M+ in revenue.
-      </p>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">4+</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">4.0</span>
-          <span class="stat-label">GPA @ Northeastern</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">95%+</span>
-          <span class="stat-label">Test Coverage</span>
-        </div>
-      </div>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Get in Touch</a>
-      </div>
-      <div class="hero-socials">
-        <a href="https://www.linkedin.com/in/sandesh-skumar/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://github.com/sandeshjit" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-        <a href="mailto:hssandesh111@gmail.com" aria-label="Email">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        </a>
-      </div>
+<main id="top">
+  <header class="hero">
+    <div class="hero-top label">
+      <span>Durham, NC · 4 years shipping</span>
+      <span class="open">● Open to backend &amp; AI roles</span>
     </div>
-    <div class="hero-scroll">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+    <h1 class="hero-title" aria-label="Backend and AI engineer">
+      <span class="row" data-drift="-1">Backend</span>
+      <span class="row r2" data-drift="1"><em>&amp;</em> <span class="ai">AI</span></span>
+      <span class="row r3" data-drift="-.5">engineer<span class="ai">.</span></span>
+    </h1>
+    <div class="hero-bottom">
+      <div class="who">
+        <span class="name">Sandesh Sampath Kumar</span>
+        <p>I build distributed services on AWS and Azure, and LLM agents that hold up in regulated businesses.</p>
+      </div>
+      <span class="label">Scroll ↓</span>
+    </div>
+  </header>
+
+  <div class="marquee" aria-label="Skills">
+    <div class="track" id="marquee"></div>
+  </div>
+
+  <section id="work" class="wrap">
+    <div class="sec-head">
+      <h2>What I've <em>built</em></h2>
+      <span class="label">5 projects</span>
+    </div>
+    <div id="projects"></div>
+  </section>
+
+  <section id="path" class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Path</h2>
+        <span class="label">Bengaluru → Boston → Durham</span>
+      </div>
+      <div id="roles"></div>
     </div>
   </section>
 
-  <!-- ─── About ─── -->
-  <section id="about">
-    <div class="container">
-      <div class="section-label">01 — About</div>
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>Building systems that <em>scale.</em></h2>
-          <p>
-            I'm Sandesh — a Backend Engineer at First Help Financial, building production
-            backend services and AI/LLM-powered systems for a high-volume auto-finance loan
-            origination platform. I hold a Master's in Computer Science from Northeastern
-            University (Khoury College) and have 4+ years of experience across First Help
-            Financial, Thoughtworks, and TCS, building distributed .NET Core microservices
-            on Azure, serverless workflows on AWS, and enterprise banking APIs with Spring Boot.
-          </p>
-          <p>
-            I specialize in microservices, cloud-native architectures, RAG/LLM systems,
-            reliability engineering, and observability. I care deeply about clean code,
-            test-driven development, and systems that don't break at 3 AM.
-          </p>
-        </div>
-        <div class="about-skills">
-          <div class="skill-group">
-            <h4>Languages</h4>
-            <div class="tags">
-              <span>Java</span><span>C#</span><span>Python</span><span>TypeScript</span><span>JavaScript</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h4>Backend & APIs</h4>
-            <div class="tags">
-              <span>Spring Boot</span><span>.NET Core</span><span>Node.js</span><span>REST APIs</span><span>Microservices</span><span>Async I/O</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h4>Cloud & Infra</h4>
-            <div class="tags">
-              <span>AWS Lambda</span><span>API Gateway</span><span>Step Functions</span><span>EC2</span><span>S3</span><span>Azure</span><span>Docker</span><span>Kubernetes</span><span>Terraform</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h4>Data & Practices</h4>
-            <div class="tags">
-              <span>PostgreSQL</span><span>SQL Server</span><span>MongoDB</span><span>Redis</span><span>CI/CD</span><span>TDD</span><span>Observability</span>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section class="wrap">
+    <div class="sec-head">
+      <h2>Kind <em>words</em></h2>
+      <span class="label">From people I've worked with</span>
+    </div>
+    <div class="words">
+      <blockquote class="reveal">"From the get-go, he started owning features and delivering them. He would be an asset in any team he works."<cite>Kishan Vaishnav · Senior Consultant, Thoughtworks</cite></blockquote>
+      <blockquote class="reveal">"Technically strong and keen to learn new technologies. He took sessions for the team on multiple topics."<cite>Shanthosh Mahalingam · Lead Consultant, Thoughtworks</cite></blockquote>
+      <blockquote class="reveal">"He possesses the qualities and skills necessary not only to excel in a rigorous academic environment but also to make meaningful contributions."<cite>Prabhanjan Soukar · Professor &amp; HoD</cite></blockquote>
     </div>
   </section>
 
-  <!-- ─── Experience ─── -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-label">02 — Experience</div>
-      <h2 class="section-title">Where I've worked.</h2>
-
-      <div class="timeline">
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">June 2026 — Present</div>
-          <div class="timeline-card">
-            <div class="timeline-role">Software Engineer | Backend & AI</div>
-            <div class="timeline-company">First Help Financial · Durham, NC</div>
-            <p>Own end-to-end design and delivery of production backend services, authoring architecture decision records (ADRs) to align technical direction across the team. Develop and extend core services for the loan origination system powering high-volume auto-finance workflows. Drive an AI-first development workflow, orchestrating Cursor with structured plan/execute prompting and memory-file context management, cutting delivery time per ticket by 35% while improving code consistency. Lead a RAG-based agentic AI proof-of-concept to automate underwriting document review in the loan origination flow, applying retrieval-augmented pipelines and tool-calling.</p>
-            <div class="timeline-tags">
-              <span>Java</span><span>Python</span><span>AWS</span><span>RAG</span><span>Agentic AI</span><span>Loan Origination</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">May 2025 — Dec 2025</div>
-          <div class="timeline-card">
-            <div class="timeline-role">Software Engineer Intern</div>
-            <div class="timeline-company">First Help Financial · Boston, MA</div>
-            <p>Implemented serverless backend services using AWS Lambda, API Gateway, Step Functions, and DocumentDB for high-volume financial workflows. Built a reproducible AWS-local dev environment (SAM + LocalStack) reducing debugging time by 55%. Developed Python libraries for structured logging and automated fault-handling, achieving 95%+ test coverage.</p>
-            <div class="timeline-tags">
-              <span>Python</span><span>AWS Lambda</span><span>Step Functions</span><span>DocumentDB</span><span>LocalStack</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Sep 2022 — Aug 2024</div>
-          <div class="timeline-card">
-            <div class="timeline-role">Application Developer</div>
-            <div class="timeline-company">Thoughtworks · Bengaluru, India</div>
-            <p>Built distributed .NET Core microservices on Azure. Scaled an ordering platform to 8× throughput and 10× global transactions. Built a dev onboarding portal cutting integration time by 60% and enabling $16M+ revenue. Boosted performance 3× via profiling, parallel execution, and optimized SQL.</p>
-            <div class="timeline-tags">
-              <span>.NET Core</span><span>Azure</span><span>SQL Server</span><span>App Insights</span><span>Microservices</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-reveal>
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">Aug 2021 — Aug 2022</div>
-          <div class="timeline-card">
-            <div class="timeline-role">Systems Engineer</div>
-            <div class="timeline-company">Tata Consultancy Services · Bengaluru, India</div>
-            <p>Implemented backend for enterprise banking systems using Spring Boot, JPA/Hibernate, and SQL. Improved API performance by 20% via query optimization. Developed Angular UI components integrated with Spring Boot APIs.</p>
-            <div class="timeline-tags">
-              <span>Spring Boot</span><span>Angular</span><span>JPA/Hibernate</span><span>SQL</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Education -->
-      <h3 class="subsection-title">Education</h3>
-      <div class="edu-grid">
-        <div class="edu-card" data-reveal>
-          <div class="edu-icon">🎓</div>
-          <div class="edu-details">
-            <div class="edu-degree">M.S. in Computer Science</div>
-            <div class="edu-school">Northeastern University, Boston</div>
-            <div class="edu-meta">Sep 2024 — May 2026 · GPA: 4.0/4.0</div>
-          </div>
-        </div>
-        <div class="edu-card" data-reveal>
-          <div class="edu-icon">🎓</div>
-          <div class="edu-details">
-            <div class="edu-degree">B.E. in Computer Science</div>
-            <div class="edu-school">Jyothy Institute of Technology, Bengaluru</div>
-            <div class="edu-meta">Aug 2017 — Aug 2021 · GPA: 8.66/10 · Best Outgoing Student</div>
-          </div>
-        </div>
-      </div>
+  <section id="contact" class="wrap contact">
+    <span class="label">Contact</span>
+    <h2>Hiring for backend <em>or AI?</em></h2>
+    <div class="contact-row">
+      <a class="say-hi" href="mailto:hssandesh111@gmail.com" data-goatcounter-click="email-sayhi" data-goatcounter-title="Email (say hi)">Say hi</a>
+      <ul>
+        <li><a href="mailto:hssandesh111@gmail.com" data-goatcounter-click="email-link" data-goatcounter-title="Email (link)">hssandesh111@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/sandesh-skumar/" target="_blank" rel="noopener" data-goatcounter-click="out-linkedin" data-goatcounter-title="LinkedIn">LinkedIn ↗</a></li>
+        <li><a href="https://github.com/sandeshjit" target="_blank" rel="noopener" data-goatcounter-click="out-github" data-goatcounter-title="GitHub">GitHub ↗</a></li>
+        <li><a href="files/resume.pdf" data-goatcounter-click="resume-contact" data-goatcounter-title="Resume (contact)">Résumé ↗</a></li>
+      </ul>
     </div>
+    <footer class="label">
+      <span>Sandesh Sampath Kumar · 2026</span>
+      <span>Built by hand, no framework</span>
+    </footer>
   </section>
+</main>
 
-  <!-- ─── Projects ─── -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-label">03 — Projects</div>
-      <h2 class="section-title">Things I've built.</h2>
+<script src="js/main.js"></script>
 
-      <div class="projects-grid">
-
-        <article class="project-card featured" data-reveal>
-          <div class="project-img">
-            <img src="images/career-advisor.png" alt="Career Advisor Backend" loading="lazy" />
-          </div>
-          <div class="project-info">
-            <div class="project-label">Featured Project</div>
-            <h3>Career Advisor Backend</h3>
-            <p>RAG-powered resume feedback engine using FastAPI and Qdrant. Built deterministic pipelines for chunking, embeddings, ranking, and caching to deliver reliable LLM-driven career guidance.</p>
-            <div class="project-tags">
-              <span>Python</span><span>FastAPI</span><span>Qdrant</span><span>RAG</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/SandeshJIT/career-advisor-backend" target="_blank" rel="noopener">GitHub ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card featured" data-reveal>
-          <div class="project-img">
-            <img src="images/careerlink.png" alt="CareerLink Platform" loading="lazy" />
-          </div>
-          <div class="project-info">
-            <div class="project-label">Featured Project</div>
-            <h3>CareerLink Platform</h3>
-            <p>Full-stack job matching platform with RBAC, secure auth, and optimized PostgreSQL queries. Efficient pagination, index-driven search, and prepared statements for fast responsiveness.</p>
-            <div class="project-tags">
-              <span>Node.js</span><span>React</span><span>PostgreSQL</span><span>RBAC</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/SandeshJIT/career-link" target="_blank" rel="noopener">GitHub ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-reveal>
-          <div class="project-img">
-            <img src="images/dreamchaserai.png" alt="DreamChaserAI" loading="lazy" />
-          </div>
-          <div class="project-info">
-            <h3>DreamChaserAI</h3>
-            <p>AI-powered study abroad platform with smart college matching (Dream/Target/Safe tiers), dynamic SOP generation via Google Gemini, and inline AI editing with PDF export.</p>
-            <div class="project-tags">
-              <span>React</span><span>FastAPI</span><span>MongoDB</span><span>Gemini API</span>
-            </div>
-            <div class="project-links">
-              <a href="https://dream-chaser-ai.vercel.app" target="_blank" rel="noopener">Live ↗</a>
-              <a href="https://github.com/SandeshJIT/DreamChaserAI" target="_blank" rel="noopener">GitHub ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-reveal>
-          <div class="project-img">
-            <img src="images/imageProcessing.png" alt="Image Processing Engine" loading="lazy" />
-          </div>
-          <div class="project-info">
-            <h3>Image Processing Engine</h3>
-            <p>Modular engine supporting sharpening, blurring, and color correction. Factory, Builder, Visitor, Adapter, and Command patterns with concurrent transformation pipelines.</p>
-            <div class="project-tags">
-              <span>Java</span><span>OOP</span><span>Concurrency</span><span>Design Patterns</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-reveal>
-          <div class="project-img">
-            <img src="images/task-management.png" alt="Task Management Backend" loading="lazy" />
-          </div>
-          <div class="project-info">
-            <h3>Task Management Backend</h3>
-            <p>.NET Core REST API with Entity Framework Core, Swagger docs, Fluent Validation, AutoMapper, and CI/CD via GitHub Actions. Comprehensive unit test coverage.</p>
-            <div class="project-tags">
-              <span>.NET Core</span><span>EF Core</span><span>REST APIs</span><span>Swagger</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/SandeshJIT/Task-Management-Backend-CSharp" target="_blank" rel="noopener">GitHub ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-reveal>
-          <div class="project-img">
-            <img src="images/rl_maze.gif" alt="RL Maze Solver" loading="lazy" />
-          </div>
-          <div class="project-info">
-            <h3>RL Maze Solver</h3>
-            <p>Custom maze environment where multiple RL agents (Q-Learning, etc.) navigate from start to exit, optimizing for shortest path. Modular agent architecture with visualization.</p>
-            <div class="project-tags">
-              <span>Python</span><span>Reinforcement Learning</span><span>Q-Learning</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/SandeshJIT/rl-maze-solver" target="_blank" rel="noopener">GitHub ↗</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── Testimonials ─── -->
-  <section id="testimonials">
-    <div class="container">
-      <div class="section-label">04 — Testimonials</div>
-      <h2 class="section-title">What people say.</h2>
-
-      <div class="testimonials-grid">
-        <blockquote class="testimonial-card" data-reveal>
-          <p>"I have worked with Sandesh for around 2 years, and he has been an excellent engineer throughout. From the get-go, he started owning features and delivering them. His analytical skills are very good. He would be an asset in any team he works."</p>
-          <footer>
-            <strong>Kishan Vaishnav</strong>
-            <span>Senior Consultant, ThoughtWorks</span>
-          </footer>
-        </blockquote>
-
-        <blockquote class="testimonial-card" data-reveal>
-          <p>"Sandesh is technically strong and keen to learn new technologies. He always brings his points in any discussion. He has very good communication skills and took sessions for the team on multiple topics."</p>
-          <footer>
-            <strong>Shanthosh Mahalingam</strong>
-            <span>Lead Consultant, ThoughtWorks</span>
-          </footer>
-        </blockquote>
-
-        <blockquote class="testimonial-card" data-reveal>
-          <p>"Sandesh possesses the qualities and skills necessary not only to excel in a rigorous academic environment but also to make meaningful contributions to any community he joins."</p>
-          <footer>
-            <strong>Prabhanjan Soukar</strong>
-            <span>Professor & HoD</span>
-          </footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── Contact ─── -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-label">05 — Contact</div>
-      <div class="contact-content">
-        <h2>Let's build something <em>great.</em></h2>
-        <p>Whether you have a project, want to talk backend systems and AI/LLM engineering, or just want to connect — I'd love to hear from you.</p>
-        <div class="contact-links">
-          <a href="mailto:hssandesh111@gmail.com" class="btn btn-primary">hssandesh111@gmail.com</a>
-          <a href="tel:+18573916536" class="contact-phone">+1 (857) 391-6536</a>
-        </div>
-        <div class="contact-socials">
-          <a href="https://www.linkedin.com/in/sandesh-skumar/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="https://github.com/sandeshjit" target="_blank" rel="noopener">GitHub ↗</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ─── Footer ─── -->
-  <footer id="footer">
-    <div class="container">
-      <span class="footer-text">Designed & built by Sandesh Sampath Kumar · 2026</span>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+<!-- Visitor analytics (GoatCounter): counts visits, referrers and countries, no cookies.
+     Replace "sandeshsampath" with the code you pick when you sign up at goatcounter.com.
+     Links like https://www.sandeshsampath.com/?ref=linkedin show up as the referrer "linkedin". -->
+<script data-goatcounter="https://sandeshsampath.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
