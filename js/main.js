@@ -214,6 +214,29 @@ function fitFlows() {
 fitFlows();
 addEventListener("resize", fitFlows);
 
+/* ---------- analytics: count ?ref= tags, then hide them from the address bar ---------- */
+// main.js runs before count.js loads, so these settings are in place when it counts.
+// GoatCounter still reads the tags from location.search; the path stays clean.
+window.goatcounter = Object.assign(window.goatcounter || {}, { path: location.pathname });
+const TRACKING_PARAMS = /^(ref|src|source|campaign|utm_[a-z]+)$/;
+function cleanAddressBar() {
+  const url = new URL(location.href);
+  const keys = [...url.searchParams.keys()].filter(k => TRACKING_PARAMS.test(k));
+  if (!keys.length) return;
+  keys.forEach(k => url.searchParams.delete(k));
+  history.replaceState(history.state, "", url.pathname + url.search + url.hash);
+}
+// count.js is async and counts during its own load, which finishes before window "load".
+// A tab opened in the background is counted when it becomes visible, so wait for that too.
+addEventListener("load", () => {
+  if (document.visibilityState === "visible") return setTimeout(cleanAddressBar, 0);
+  document.addEventListener("visibilitychange", function once() {
+    if (document.visibilityState !== "visible") return;
+    document.removeEventListener("visibilitychange", once);
+    setTimeout(cleanAddressBar, 0);
+  });
+});
+
 /* ---------- nav + reveal ---------- */
 const nav = document.getElementById("nav");
 addEventListener("scroll", () => nav.classList.toggle("solid", scrollY > 40), { passive: true });
